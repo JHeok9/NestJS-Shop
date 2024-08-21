@@ -4,8 +4,8 @@
   "settings": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": 0,
-    "scrollLeft": 0,
+    "scrollTop": -110,
+    "scrollLeft": -18,
     "zoomLevel": 1,
     "show": 511,
     "database": 4,
@@ -88,7 +88,7 @@
           "3qIoY9sp7YEvH0_HFF-dV"
         ],
         "ui": {
-          "x": 499,
+          "x": 517,
           "y": 64,
           "zIndex": 2,
           "widthName": 60,
@@ -96,7 +96,7 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1724044726664,
+          "updateAt": 1724218108394,
           "createAt": 1724030797765
         }
       },
@@ -187,15 +187,15 @@
           "WTeUoJAMQfT9bswAWpj7h"
         ],
         "ui": {
-          "x": 26,
-          "y": 571,
+          "x": 27,
+          "y": 425,
           "zIndex": 10,
           "widthName": 60,
           "widthComment": 60,
           "color": ""
         },
         "meta": {
-          "updateAt": 1724045892708,
+          "updateAt": 1724218114473,
           "createAt": 1724036931002
         }
       },
@@ -236,15 +236,15 @@
           "-mkBxKHqiw1hX6jVIgJTD"
         ],
         "ui": {
-          "x": 516,
-          "y": 575,
+          "x": 522,
+          "y": 572,
           "zIndex": 24,
           "widthName": 60,
           "widthComment": 60,
           "color": ""
         },
         "meta": {
-          "updateAt": 1724045894130,
+          "updateAt": 1724218110592,
           "createAt": 1724037008014
         }
       },
@@ -290,14 +290,14 @@
         ],
         "ui": {
           "x": 27,
-          "y": 792,
+          "y": 644,
           "zIndex": 323,
           "widthName": 81,
           "widthComment": 60,
           "color": ""
         },
         "meta": {
-          "updateAt": 1724045896166,
+          "updateAt": 1724218123096,
           "createAt": 1724045536584
         }
       }
@@ -708,18 +708,18 @@
         "tableId": "NpeE_ffE0XyhXoDeRw7oF",
         "name": "userid",
         "comment": "회원아이디",
-        "dataType": "",
+        "dataType": "VARCHAR(70)",
         "default": "",
         "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 60,
           "widthComment": 62,
-          "widthDataType": 60,
+          "widthDataType": 75,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1724044723516,
+          "updateAt": 1724217963343,
           "createAt": 1724044589192
         }
       },
@@ -728,18 +728,18 @@
         "tableId": "NpeE_ffE0XyhXoDeRw7oF",
         "name": "addr_recipient",
         "comment": "수령인",
-        "dataType": "",
+        "dataType": "VARCHAR(10)",
         "default": "",
         "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 77,
           "widthComment": 60,
-          "widthDataType": 60,
+          "widthDataType": 75,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1724044847381,
+          "updateAt": 1724218034857,
           "createAt": 1724044589343
         }
       },
@@ -748,18 +748,18 @@
         "tableId": "NpeE_ffE0XyhXoDeRw7oF",
         "name": "addr_num",
         "comment": "우편번호",
-        "dataType": "",
+        "dataType": "VARCHAR(6)",
         "default": "",
         "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 60,
           "widthComment": 60,
-          "widthDataType": 60,
+          "widthDataType": 68,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1724044683097,
+          "updateAt": 1724218041443,
           "createAt": 1724044589477
         }
       },
@@ -768,18 +768,18 @@
         "tableId": "NpeE_ffE0XyhXoDeRw7oF",
         "name": "addr_basic",
         "comment": "기본주소",
-        "dataType": "",
+        "dataType": "VARCHAR(100)",
         "default": "",
         "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 60,
           "widthComment": 60,
-          "widthDataType": 60,
+          "widthDataType": 81,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1724044690811,
+          "updateAt": 1724218051805,
           "createAt": 1724044589601
         }
       },
@@ -788,18 +788,18 @@
         "tableId": "NpeE_ffE0XyhXoDeRw7oF",
         "name": "addr_detail",
         "comment": "상세주소",
-        "dataType": "",
+        "dataType": "VARCHAR(100)",
         "default": "",
         "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 61,
           "widthComment": 60,
-          "widthDataType": 60,
+          "widthDataType": 81,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1724044694869,
+          "updateAt": 1724218056708,
           "createAt": 1724044589667
         }
       },
@@ -808,18 +808,18 @@
         "tableId": "NpeE_ffE0XyhXoDeRw7oF",
         "name": "addr_phone",
         "comment": "핸드폰",
-        "dataType": "",
+        "dataType": "VARCHAR(12)",
         "default": "",
         "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 65,
           "widthComment": 60,
-          "widthDataType": 60,
+          "widthDataType": 75,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1724044703754,
+          "updateAt": 1724218068813,
           "createAt": 1724044589806
         }
       },
@@ -828,18 +828,18 @@
         "tableId": "NpeE_ffE0XyhXoDeRw7oF",
         "name": "addr_def",
         "comment": "기본배송지여부",
-        "dataType": "",
+        "dataType": "VARCHAR(3)",
         "default": "'n'",
         "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 60,
           "widthComment": 86,
-          "widthDataType": 60,
+          "widthDataType": 68,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1724044766514,
+          "updateAt": 1724218074870,
           "createAt": 1724044589909
         }
       },
@@ -888,18 +888,18 @@
         "tableId": "NpeE_ffE0XyhXoDeRw7oF",
         "name": "addr_name",
         "comment": "배송지이름",
-        "dataType": "",
+        "dataType": "VARCHAR(10)",
         "default": "",
         "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 61,
           "widthComment": 62,
-          "widthDataType": 60,
+          "widthDataType": 75,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1724044677090,
+          "updateAt": 1724218018230,
           "createAt": 1724044657097
         }
       },
@@ -1128,7 +1128,7 @@
         "tableId": "2dcOushq_xqLm3caDVIcG",
         "name": "cnt",
         "comment": "재고",
-        "dataType": "int(11)",
+        "dataType": "INT(11)",
         "default": "0",
         "options": 8,
         "ui": {
@@ -1139,7 +1139,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1724045218498,
+          "updateAt": 1724218175144,
           "createAt": 1724045016707
         }
       },
@@ -1266,11 +1266,11 @@
       "Flp8Ty6TQwdLo-ecmXH9j": {
         "id": "Flp8Ty6TQwdLo-ecmXH9j",
         "tableId": "2dcOushq_xqLm3caDVIcG",
-        "name": "sale",
-        "comment": "할인",
-        "dataType": "int",
-        "default": "0",
-        "options": 8,
+        "name": "sale_price",
+        "comment": "할인가",
+        "dataType": "INT(11)",
+        "default": "",
+        "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 60,
@@ -1279,7 +1279,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1724045321755,
+          "updateAt": 1724218249459,
           "createAt": 1724045265631
         }
       },
@@ -1428,18 +1428,18 @@
         "tableId": "FqkTnNWE2plnkNX8r09tr",
         "name": "seq",
         "comment": "고유번호",
-        "dataType": "",
+        "dataType": "INT(11)",
         "default": "",
-        "options": 0,
+        "options": 10,
         "ui": {
-          "keys": 0,
+          "keys": 1,
           "widthName": 60,
           "widthComment": 60,
           "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1724045793179,
+          "updateAt": 1724218131137,
           "createAt": 1724045678163
         }
       },
@@ -1448,7 +1448,7 @@
         "tableId": "FqkTnNWE2plnkNX8r09tr",
         "name": "order_seq",
         "comment": "주문번호",
-        "dataType": "",
+        "dataType": "INT(11)",
         "default": "",
         "options": 0,
         "ui": {
@@ -1459,7 +1459,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1724045795306,
+          "updateAt": 1724218141186,
           "createAt": 1724045778418
         }
       },
@@ -1468,7 +1468,7 @@
         "tableId": "FqkTnNWE2plnkNX8r09tr",
         "name": "item_seq",
         "comment": "상품번호",
-        "dataType": "",
+        "dataType": "INT(11)",
         "default": "",
         "options": 0,
         "ui": {
@@ -1479,7 +1479,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1724045808071,
+          "updateAt": 1724218143618,
           "createAt": 1724045796642
         }
       },
@@ -1488,18 +1488,18 @@
         "tableId": "FqkTnNWE2plnkNX8r09tr",
         "name": "item_name",
         "comment": "상품이름",
-        "dataType": "",
+        "dataType": "VARCHAR(50)",
         "default": "",
         "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 60,
           "widthComment": 60,
-          "widthDataType": 60,
+          "widthDataType": 75,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1724045835779,
+          "updateAt": 1724218155806,
           "createAt": 1724045796781
         }
       },
@@ -1508,7 +1508,7 @@
         "tableId": "FqkTnNWE2plnkNX8r09tr",
         "name": "cnt",
         "comment": "주문수량",
-        "dataType": "",
+        "dataType": "INT(11)",
         "default": "",
         "options": 0,
         "ui": {
@@ -1519,7 +1519,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1724045868427,
+          "updateAt": 1724218279227,
           "createAt": 1724045796926
         }
       },
@@ -1528,7 +1528,7 @@
         "tableId": "FqkTnNWE2plnkNX8r09tr",
         "name": "price",
         "comment": "주문가격",
-        "dataType": "",
+        "dataType": "INT(11)",
         "default": "",
         "options": 0,
         "ui": {
@@ -1539,7 +1539,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1724045877283,
+          "updateAt": 1724218273090,
           "createAt": 1724045797071
         }
       },
@@ -1870,7 +1870,8 @@
       -1,
       {
         "comment": 1724044599508,
-        "name": 1724044723515
+        "name": 1724044723515,
+        "dataType": 1724217963342
       }
     ],
     "GFTkPsqx4aIPN-aLVROgx": [
@@ -1879,7 +1880,8 @@
       -1,
       {
         "comment": 1724044847380,
-        "name": 1724044825908
+        "name": 1724044825908,
+        "dataType": 1724218034856
       }
     ],
     "b4evSlUfmfQL493VmMT7U": [
@@ -1888,7 +1890,8 @@
       -1,
       {
         "comment": 1724044625591,
-        "name": 1724044683096
+        "name": 1724044683096,
+        "dataType": 1724218041443
       }
     ],
     "3vchk20Zop2DQZNLKU87f": [
@@ -1897,7 +1900,8 @@
       -1,
       {
         "comment": 1724044629028,
-        "name": 1724044690810
+        "name": 1724044690810,
+        "dataType": 1724218051804
       }
     ],
     "ZU29_THjYD3uwsytojNxq": [
@@ -1906,7 +1910,8 @@
       -1,
       {
         "comment": 1724044631862,
-        "name": 1724044694869
+        "name": 1724044694869,
+        "dataType": 1724218056708
       }
     ],
     "k1CwwNjWXnUeFPjJbJFVB": [
@@ -1915,7 +1920,8 @@
       -1,
       {
         "comment": 1724044634013,
-        "name": 1724044703753
+        "name": 1724044703753,
+        "dataType": 1724218068812
       }
     ],
     "aAUVI7KVqWI_pdKFYn39S": [
@@ -1925,7 +1931,8 @@
       {
         "comment": 1724044637535,
         "default": 1724044734580,
-        "name": 1724044766514
+        "name": 1724044766514,
+        "dataType": 1724218074869
       }
     ],
     "YmVrnDT3IXhGS-FQ_LRZ9": [
@@ -1946,7 +1953,8 @@
       -1,
       {
         "comment": 1724044664455,
-        "name": 1724044677089
+        "name": 1724044677089,
+        "dataType": 1724218018229
       }
     ],
     "XqgZILHy5v69UZ4bIyJxX": [
@@ -2080,7 +2088,7 @@
       {
         "comment": 1724045030679,
         "name": 1724045072407,
-        "dataType": 1724045187827,
+        "dataType": 1724218175143,
         "options(notNull)": 1724045213398,
         "default": 1724045218497
       }
@@ -2151,11 +2159,11 @@
       1724045265630,
       -1,
       {
-        "comment": 1724045274137,
-        "dataType": 1724045281106,
-        "options(notNull)": 1724045288191,
-        "default": 1724045321754,
-        "name": 1724045296499
+        "comment": 1724218209449,
+        "dataType": 1724218249458,
+        "options(notNull)": 1724218221155,
+        "default": 1724218238202,
+        "name": 1724218228507
       }
     ],
     "pWi8Ik7iOL2GHeC3fnYLu": [
@@ -2236,7 +2244,9 @@
       -1,
       {
         "name": 1724045780469,
-        "comment": 1724045793178
+        "comment": 1724045793178,
+        "dataType": 1724218131136,
+        "options(primaryKey)": 1724218123382
       }
     ],
     "J9ON_BU5MG8gToo7IjYzF": [
@@ -2245,7 +2255,8 @@
       -1,
       {
         "name": 1724045784708,
-        "comment": 1724045795306
+        "comment": 1724045795306,
+        "dataType": 1724218141186
       }
     ],
     "yVqYUTssXMxzLWsT5TxDQ": [
@@ -2254,7 +2265,8 @@
       -1,
       {
         "comment": 1724045800620,
-        "name": 1724045808070
+        "name": 1724045808070,
+        "dataType": 1724218143618
       }
     ],
     "KZAw61aRPzqw2TMbPbeCI": [
@@ -2263,7 +2275,8 @@
       -1,
       {
         "comment": 1724045816120,
-        "name": 1724045835778
+        "name": 1724045835778,
+        "dataType": 1724218155806
       }
     ],
     "3_irIul23VZQ4kx9ve9jZ": [
@@ -2272,7 +2285,8 @@
       -1,
       {
         "comment": 1724045868426,
-        "name": 1724045840886
+        "name": 1724045840886,
+        "dataType": 1724218279226
       }
     ],
     "V_uDq3wHXvuxmwO1O5DVP": [
@@ -2281,7 +2295,8 @@
       -1,
       {
         "comment": 1724045877282,
-        "name": 1724045843087
+        "name": 1724045843087,
+        "dataType": 1724218273090
       }
     ],
     "QVZ4eJcF0RYQRAnfwBz3A": [

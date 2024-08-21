@@ -11,16 +11,7 @@ export class UserSingInDto {
     password: string;
 }
 
-export class CreateUserDto {
-    @IsString()
-    @IsNotEmpty()
-    userid: string;
-
-    @IsString()
-    @IsNotEmpty()
-    @MinLength(8)  // 비밀번호는 최소 8자리
-    password: string;
-
+export class CreateUserDto extends UserSingInDto {
     @IsString()
     @IsNotEmpty()
     name: string;

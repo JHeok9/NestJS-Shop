@@ -21,7 +21,7 @@ export class UsersController {
 
     // 로그인
     @Post('signin')
-    signIn(@Body() userSingInDto: UserSingInDto): Promise<string> {
+    signIn(@Body() userSingInDto: UserSingInDto): Promise<{accessToken: string}> {
         return this.usersService.signIn(userSingInDto);
     }
 

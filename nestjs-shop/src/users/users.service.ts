@@ -6,12 +6,14 @@ import { plainToInstance } from 'class-transformer';
 import * as bcrypt from 'bcryptjs';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
+import { CreateAddressDto } from './dto/address.dto';
+import { Address } from './entity/address.entity';
 
 @Injectable()
 export class UsersService {
     constructor(
-        @InjectRepository(Users)
-        private usersRepository: Repository<Users>,
+        @InjectRepository(Users) private usersRepository: Repository<Users>,
+        @InjectRepository(Address) private addressRepository: Repository<Address>,
         private readonly jwtService: JwtService,
     ) {}
 
@@ -54,6 +56,12 @@ export class UsersService {
             throw new UnauthorizedException('logIn failed')
         }
     }
+
+    // 배송지생성
+    async createAddress(createAddressDto: CreateAddressDto): Promise<Address> {
+        return this.addressRepository.save(createAddressDto);
+    }
+
 
 
 }

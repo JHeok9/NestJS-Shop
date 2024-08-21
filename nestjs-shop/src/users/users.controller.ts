@@ -2,6 +2,8 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { Users } from './entity/users.entity';
 import { CreateUserDto, UserSingInDto } from './dto/user.dto';
+import { CreateAddressDto } from './dto/address.dto';
+import { Address } from './entity/address.entity';
 
 @Controller('users')
 export class UsersController {
@@ -23,6 +25,12 @@ export class UsersController {
     @Post('signin')
     signIn(@Body() userSingInDto: UserSingInDto): Promise<{accessToken: string}> {
         return this.usersService.signIn(userSingInDto);
+    }
+
+    // 배송지생성
+    @Post('address/create')
+    createAddress(@Body() createAddressDto: CreateAddressDto): Promise<Address> {
+        return this.usersService.createAddress(createAddressDto);
     }
 
 

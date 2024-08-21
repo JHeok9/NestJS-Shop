@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { UsersModule } from './users/users.module';
-import { Users } from './users/entity/users.entity';
 
 @Module({
   imports: [
@@ -10,6 +9,7 @@ import { Users } from './users/entity/users.entity';
       isGlobal: true,
       envFilePath: '.env',
     }),
+    
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: process.env.DB_HOST,
@@ -17,9 +17,10 @@ import { Users } from './users/entity/users.entity';
       username: process.env.DB_USERNAME,
       password: process.env.DB_PASSWD,
       database: process.env.DB_DATABASE,
-      entities: [Users],
+      entities: [__dirname + '/**/entity/*.entity{.ts,.js}'],
       synchronize: true,
     }),
+
     UsersModule,
   ],
   controllers: [],

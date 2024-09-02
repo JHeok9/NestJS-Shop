@@ -18,16 +18,11 @@ export class UsersService {
     ) {}
 
     // 유저 정보 가져오기
-    findOne(userid: string): Promise<Users> {
-        const user = this.usersRepository.findOne({
+    async findOne(userid: string): Promise<Users> {
+        return this.usersRepository.findOne({
             select: ['seq', 'userid', 'name', 'nickname', 'birth', 'gender', 'phone', 'email', 'user_level'],
             where: {userid: userid}
         });
-
-        if(!user) {
-            throw new NotFoundException(`user id ${userid} not found`);
-        }
-        return user;
     }
 
     // 회원가입

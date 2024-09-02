@@ -11,4 +11,10 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
         ignoreExpiration: false,
       });
     }
+
+
+    async validate(payload) {
+      return payload;
+    }
+
 }

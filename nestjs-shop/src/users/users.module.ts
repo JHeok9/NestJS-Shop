@@ -20,6 +20,7 @@ import { Address } from './entity/address.entity';
     })
   ],
   controllers: [UsersController],
-  providers: [UsersService, JwtStrategy]
+  providers: [UsersService, JwtStrategy],
+  exports: [JwtStrategy, PassportModule],
 })
 export class UsersModule {}

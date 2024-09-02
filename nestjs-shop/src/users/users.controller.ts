@@ -1,11 +1,10 @@
-import { Body, Controller, Get, Post, Req, UseGuards } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Patch, Post, Req, UseGuards } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { Users } from './entity/users.entity';
 import { CreateUserDto, UserSingInDto } from './dto/user.dto';
 import { CreateAddressDto } from './dto/address.dto';
 import { Address } from './entity/address.entity';
 import { JwtAuthGuard } from './jwt/jwt.guard';
-import { promises } from 'dns';
 
 @Controller('users')
 export class UsersController {
@@ -49,6 +48,13 @@ export class UsersController {
     addressList(@Req() req): Promise<Address[]>{
         const userid = req.user.userid;
         return this.usersService.addressFindAll(userid);
+    }
+
+    // 배송지삭제
+    @UseGuards(JwtAuthGuard)
+    @Delete('address/delete')
+    deleteAddress(@Body() seq: number) {
+        return this.usersService.deleteAddress(seq);
     }
 
 }

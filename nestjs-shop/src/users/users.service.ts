@@ -62,6 +62,12 @@ export class UsersService {
         return this.addressRepository.find({where: {userid: userid}});
     }
 
+    // 배송지삭제
+    async deleteAddress(seq: number){
+        const result = await this.addressRepository.delete(seq);
+        return result.affected > 0;
+    }
+
 
 
 }

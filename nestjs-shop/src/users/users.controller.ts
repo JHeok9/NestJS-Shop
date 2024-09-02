@@ -17,18 +17,18 @@ export class UsersController {
         return this.usersService.signUp(createUserDto);
     }
 
+    // 로그인
+    @Post('signin')
+    signIn(@Body() userSingInDto: UserSingInDto): Promise<{accessToken: string}> {
+        return this.usersService.signIn(userSingInDto);
+    }    
+
     // 회원 정보
     @UseGuards(JwtAuthGuard)
     @Get('userinfo')
     userInfo(@Req() req): Promise<Users> {
         const userid = req.user.userid;
         return this.usersService.findOne(userid);
-    }
-
-    // 로그인
-    @Post('signin')
-    signIn(@Body() userSingInDto: UserSingInDto): Promise<{accessToken: string}> {
-        return this.usersService.signIn(userSingInDto);
     }
 
     // 배송지생성

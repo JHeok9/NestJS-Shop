@@ -17,14 +17,6 @@ export class UsersService {
         private readonly jwtService: JwtService,
     ) {}
 
-    // 유저 정보 가져오기
-    async findOne(userid: string): Promise<Users> {
-        return this.usersRepository.findOne({
-            select: ['seq', 'userid', 'name', 'nickname', 'birth', 'gender', 'phone', 'email', 'user_level'],
-            where: {userid: userid}
-        });
-    }
-
     // 회원가입
     async signUp(createUserDto: CreateUserDto): Promise<void>{
         
@@ -50,6 +42,14 @@ export class UsersService {
         } else {
             throw new UnauthorizedException('logIn failed')
         }
+    }
+
+    // 유저 정보 가져오기
+    async findOne(userid: string): Promise<Users> {
+        return this.usersRepository.findOne({
+            select: ['seq', 'userid', 'name', 'nickname', 'birth', 'gender', 'phone', 'email', 'user_level'],
+            where: {userid: userid}
+        });
     }
 
     // 배송지생성

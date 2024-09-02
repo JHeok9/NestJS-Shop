@@ -3,6 +3,10 @@ import { IsString, IsEmail, IsNotEmpty, MinLength, IsOptional, IsDateString, IsE
 export class CreateAddressDto {
     @IsString()
     @IsNotEmpty()
+    userid: string;
+
+    @IsString()
+    @IsNotEmpty()
     addr_name: string;
 
     @IsString()

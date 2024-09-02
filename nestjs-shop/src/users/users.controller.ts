@@ -31,8 +31,14 @@ export class UsersController {
     }
 
     // 배송지생성
+    @UseGuards(JwtAuthGuard)
     @Post('address/create')
-    createAddress(@Body() createAddressDto: CreateAddressDto): Promise<Address> {
+    createAddress(
+        @Req() req,
+        @Body() createAddressDto: CreateAddressDto
+    ): Promise<Address> {
+        const userid = req.user.userid;
+        createAddressDto.userid = userid;
         return this.usersService.createAddress(createAddressDto);
     }
 

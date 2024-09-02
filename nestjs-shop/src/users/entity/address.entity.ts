@@ -9,7 +9,6 @@ export class Address {
     @Column({
         type: "varchar",
         length: 70,
-        unique: true,
         nullable: false,
         comment: "유저아이디"
     })
@@ -57,7 +56,7 @@ export class Address {
 
     @Column({
         type: "varchar",
-        length: 12,
+        length: 13,
         nullable: false,
         comment: "핸드폰"
     })
@@ -65,9 +64,10 @@ export class Address {
 
     @Column({
         type: "varchar",
-        length: 100,
+        length: 3,
         nullable: false,
-        comment: "기본주소"
+        default: "n",
+        comment: "기본배송지여부"
     })
     addr_def: string;
 }

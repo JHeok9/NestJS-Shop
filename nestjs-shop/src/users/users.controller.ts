@@ -5,6 +5,7 @@ import { CreateUserDto, UserSingInDto } from './dto/user.dto';
 import { CreateAddressDto } from './dto/address.dto';
 import { Address } from './entity/address.entity';
 import { JwtAuthGuard } from './jwt/jwt.guard';
+import { promises } from 'dns';
 
 @Controller('users')
 export class UsersController {
@@ -42,6 +43,12 @@ export class UsersController {
         return this.usersService.createAddress(createAddressDto);
     }
 
-
+    // 배송지목록
+    @UseGuards(JwtAuthGuard)
+    @Get('address/list')
+    addressList(@Req() req): Promise<Address[]>{
+        const userid = req.user.userid;
+        return this.usersService.addressFindAll(userid);
+    }
 
 }

@@ -57,6 +57,11 @@ export class UsersService {
         return this.addressRepository.save(createAddressDto);
     }
 
+    // 배송지목록
+    async addressFindAll(userid: string): Promise<Address[]>{
+        return this.addressRepository.find({where: {userid: userid}});
+    }
+
 
 
 }

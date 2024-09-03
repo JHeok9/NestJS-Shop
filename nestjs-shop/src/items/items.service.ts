@@ -12,6 +12,7 @@ export class ItemsService {
         private readonly usersService: UsersService,
     ) {}
 
+    // 상품 등록
     async createItem(createItemDto: CreateItemDto) {
         try {
             const user_info = await this.usersService.findOne(createItemDto.userid);

@@ -7,7 +7,7 @@ import { CreateItemDto } from './dto/item.dto';
 export class ItemsController {
     constructor(private itemsService: ItemsService){};
 
-    // 상품 추가
+    // 상품 등록
     @UseGuards(JwtAuthGuard)
     @Post('create')
     async createItem(@Req() req, @Body() createItemDto: CreateItemDto) {

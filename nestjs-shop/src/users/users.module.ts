@@ -21,6 +21,6 @@ import { Address } from './entity/address.entity';
   ],
   controllers: [UsersController],
   providers: [UsersService, JwtStrategy],
-  exports: [JwtStrategy, PassportModule],
+  exports: [UsersService, JwtStrategy, PassportModule],
 })
 export class UsersModule {}

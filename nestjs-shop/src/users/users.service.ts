@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException, UnauthorizedException } from '@nestjs/common';
 import { Users } from './entity/users.entity';
 import { Repository } from 'typeorm';
-import { CreateUserDto, UserSingInDto } from './dto/user.dto';
+import { CreateUserDto, UpdateUserDto, UserSingInDto } from './dto/user.dto';
 import { plainToInstance } from 'class-transformer';
 import * as bcrypt from 'bcryptjs';
 import { JwtService } from '@nestjs/jwt';
@@ -44,12 +44,29 @@ export class UsersService {
         }
     }
 
-    // 유저 정보 가져오기
+    // 회원정보
     async findOne(userid: string): Promise<Users> {
         return this.usersRepository.findOne({
             select: ['seq', 'userid', 'name', 'nickname', 'birth', 'gender', 'phone', 'email', 'user_level'],
             where: {userid: userid}
         });
+    }
+
+    // 회원정보수정
+    async modifyUser(updateUserDto: UpdateUserDto){
+        const { userid, ...updateData } = updateUserDto;
+
+        const result = await this.usersRepository.update(
+            {userid: userid},
+            updateData
+        )
+
+        if(result.affected > 0){
+            return "성공";
+        }else{
+            return "실패";
+        }
+        
     }
 
     // 배송지생성

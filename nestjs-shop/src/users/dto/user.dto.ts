@@ -51,3 +51,49 @@ export class CreateUserDto extends UserSingInDto {
     @IsString()
     sns?: string;
 }
+
+export class UpdateUserDto {
+    @IsString()
+    @IsNotEmpty()
+    userid: string;
+
+    @IsString()
+    @IsOptional()
+    name?: string;
+
+    @IsString()
+    @IsOptional()
+    nickname?: string;
+
+    @IsString()
+    @IsOptional()
+    birth?: string;
+
+    @IsString()
+    @IsOptional()
+    gender?: string;
+
+    @IsString()
+    @IsOptional()
+    phone?: string;
+
+    @IsEmail()  // 이메일 형식 검증
+    @IsOptional()
+    email?: string;
+
+    @IsString()
+    @IsOptional()
+    terms_agreement?: string;
+
+    @IsString()
+    @IsOptional()
+    privacy_agreement?: string;
+
+    @IsOptional()  // 프로필 이미지는 선택 사항
+    @IsString()
+    profile_img?: string;
+
+    @IsOptional()  // sns 필드는 선택 사항
+    @IsString()
+    sns?: string;
+}

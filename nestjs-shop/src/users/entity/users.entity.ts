@@ -91,6 +91,7 @@ export class Users {
     @Column({
         type: "varchar",
         length: 150,
+        nullable: true,
         comment: "프로필이미지"
     })
     profile_img: string;
@@ -107,6 +108,7 @@ export class Users {
     @Column({
         type: "varchar",
         length: 5,
+        nullable: true,
         comment: "sns로그인"
     })
     sns: string;
@@ -129,6 +131,7 @@ export class Users {
     
     @DeleteDateColumn({
         type: "datetime",
+        nullable: true,
         comment: "탈퇴일"        
     })
     leave_dt: Date;

@@ -15,11 +15,10 @@ export class Items {
 
     @Column({
         type: "int",
-        length: 11,
         nullable: false,
         comment: "카테고리번호"
     })
-    category_seq: number
+    category_seq: number;
     
     @Column({
         type: "varchar",
@@ -47,7 +46,6 @@ export class Items {
 
     @Column({
         type: "int",
-        length: 11,
         nullable: false,
         comment: "가격"
     })
@@ -55,14 +53,13 @@ export class Items {
 
     @Column({
         type: "int",
-        length: 11,
+        nullable: true,
         comment: "할인가"
     })
     sale_price: number;
 
     @Column({
         type: "int",
-        length: 11,
         nullable: false,
         default: 0,
         comment: "재고"
@@ -72,6 +69,7 @@ export class Items {
     @Column({
         type: "varchar",
         length: 150,
+        nullable: true,
         comment: "이미지1"
     })
     img1: string;
@@ -79,6 +77,7 @@ export class Items {
     @Column({
         type: "varchar",
         length: 150,
+        nullable: true,
         comment: "이미지2"
     })
     img2: string;
@@ -86,6 +85,7 @@ export class Items {
     @Column({
         type: "varchar",
         length: 150,
+        nullable: true,
         comment: "이미지3"
     })
     img3: string;
@@ -93,6 +93,7 @@ export class Items {
     @Column({
         type: "varchar",
         length: 150,
+        nullable: true,
         comment: "이미지4"
     })
     img4: string;
@@ -100,6 +101,7 @@ export class Items {
     @Column({
         type: "varchar",
         length: 150,
+        nullable: true,
         comment: "이미지5"
     })
     img5: string;
@@ -115,6 +117,7 @@ export class Items {
 
     @Column({
         type: "datetime",
+        nullable: true,
         comment: "삭제일"
     })
     delete_dt: Date;

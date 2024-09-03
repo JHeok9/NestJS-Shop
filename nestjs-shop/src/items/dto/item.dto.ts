@@ -35,21 +35,21 @@ export class CreateItemDto {
     
     @IsOptional()
     @IsString()
-    img1?: number;
+    img1?: string;
 
     @IsOptional()
     @IsString()
-    img2?: number;
+    img2?: string;
 
     @IsOptional()
     @IsString()
-    img3?: number;
+    img3?: string;
 
     @IsOptional()
     @IsString()
-    img4?: number;
+    img4?: string;
 
     @IsOptional()
     @IsString()
-    img5?: number;
+    img5?: string;
 }

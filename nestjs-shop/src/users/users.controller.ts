@@ -41,6 +41,17 @@ export class UsersController {
         return this.usersService.modifyUser(updateUserDto);
     }
 
+    // 회원등급변경
+    @UseGuards(JwtAuthGuard)
+    @Patch('modifylevel')
+    async modifyLevel(
+        @Req() req,
+        @Body() updateUserDto: UpdateUserDto
+    ){
+        return this.usersService.modifyLevel(req.user.userid, updateUserDto);
+    }
+
+
     // 배송지생성
     @UseGuards(JwtAuthGuard)
     @Post('address/create')

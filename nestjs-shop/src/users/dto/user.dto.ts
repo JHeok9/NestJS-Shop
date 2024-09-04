@@ -89,11 +89,15 @@ export class UpdateUserDto {
     @IsOptional()
     privacy_agreement?: string;
 
-    @IsOptional()  // 프로필 이미지는 선택 사항
+    @IsOptional()
     @IsString()
     profile_img?: string;
 
-    @IsOptional()  // sns 필드는 선택 사항
+    @IsOptional()
     @IsString()
     sns?: string;
+
+    @IsOptional()
+    @IsString()
+    user_level?: string;
 }

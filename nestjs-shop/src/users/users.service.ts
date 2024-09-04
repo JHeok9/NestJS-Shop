@@ -66,8 +66,27 @@ export class UsersService {
         }else{
             return "실패";
         }
-        
     }
+
+    // 회원등급수정
+    async modifyLevel(userid: string, updateUserDto: UpdateUserDto){
+        const user = await this.findOne(userid);
+        console.log(user);
+        if(user.user_level == "master"){
+            const taget_userid = updateUserDto.userid;
+            const user_level = updateUserDto.user_level;
+            
+            const result = this.usersRepository.update({userid: taget_userid},{user_level: user_level});
+            if((await result).affected > 0){
+                return "성공";
+            }else{
+                return "실패1";
+            }
+        }else{
+            return "실패2";
+        }
+    }
+
 
     // 배송지생성
     async createAddress(createAddressDto: CreateAddressDto): Promise<Address> {

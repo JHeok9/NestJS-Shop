@@ -71,7 +71,7 @@ export class UsersService {
     // 회원등급수정
     async modifyLevel(userid: string, updateUserDto: UpdateUserDto){
         const user = await this.findOne(userid);
-        console.log(user);
+
         if(user.user_level == "master"){
             const taget_userid = updateUserDto.userid;
             const user_level = updateUserDto.user_level;
